@@ -16,9 +16,14 @@ import os
 if os.path.exists('env.py'):
     import environ
 
-CLOUDINARY_STORAGE: {
-    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+os.environ.get('CLOUDINARY_URL')
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dyi0up7ld',
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY')
 }
+
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,7 +39,9 @@ SECRET_KEY = 'django-insecure-wz@_6ti@xc&zsy*1#ia41ylndv=of+a1)l+!j3&lvk83d#pzg(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-renatolemes-tasksapp-8s763zkkh0r.ws-eu102.gitpod.io',]
+CSRF_TRUSTED_ORIGINS = ['https://8000-renatolemes-tasksapp-8s763zkkh0r.ws-eu102.gitpod.io']
+
 
 
 # Application definition
@@ -48,6 +55,8 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+
+    'profiles',
 ]
 
 MIDDLEWARE = [
