@@ -39,7 +39,7 @@ SECRET_KEY = 'django-insecure-wz@_6ti@xc&zsy*1#ia41ylndv=of+a1)l+!j3&lvk83d#pzg(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-renatolemes-tasksapp-8s763zkkh0r.ws-eu102.gitpod.io',]
+ALLOWED_HOSTS = ['8000-renatolemes-tasksapp-o59gqa0ba7b.ws-eu102.gitpod.io',]
 CSRF_TRUSTED_ORIGINS = ['https://8000-renatolemes-tasksapp-8s763zkkh0r.ws-eu102.gitpod.io']
 
 
