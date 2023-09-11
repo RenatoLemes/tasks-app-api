@@ -27,7 +27,6 @@ CLOUDINARY_STORAGE = {
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 REST_FRAMEWORK = {
@@ -53,7 +52,7 @@ JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER': 'tasks_api.serializers.CurrentUserSerializer'
 }
 
 # Quick-start development settings - unsuitable for production
@@ -65,8 +64,7 @@ SECRET_KEY = '12345678' #os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-renatolemes-tasksappapi-3alceeuv8s9.ws-eu102.gitpod.io',
-'localhost', 'https://task-app-renato-bb143324df86.herokuapp.com']
+ALLOWED_HOSTS = ['https://8000-renatolemes-tasksappapi-05gokbfsz8f.ws-eu104.gitpod.io/', 'https://task-app-renato-bb143324df86.herokuapp.com']
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
