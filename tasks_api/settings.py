@@ -64,7 +64,7 @@ SECRET_KEY = '12345678' #os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-renatolemes-tasksappapi-7g01n0ejrm3.ws-eu104.gitpod.io', 'https://task-app-renato-bb143324df86.herokuapp.com']
+ALLOWED_HOSTS = ['8000-renatolemes-tasksappapi-7g01n0ejrm3.ws-eu104.gitpod.io', 'task-app-api-renato-76d9c5feebfc.herokuapp.com']
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
