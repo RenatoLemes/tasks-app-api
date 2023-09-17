@@ -30,16 +30,14 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [(
-        'rest_framework.authentication.SessionAuthentication'
-        if 'DEV' in os.environ
-        else 'dj_rest_auth.jwt_auth.JWTCookieAuthentication'
-    )],
+    'DEFAULT_AUTHENTICATION_CLASSES': ['dj_rest_auth.jwt_auth.JWTCookieAuthentication'],
     'DEFAULT_PAGINATION_CLASS':
         'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DATETIME_FORMAT': '%d %b %Y',
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # if 'DEV' not in os.environ:
 #     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [
 #         'rest_framework.renderers.JSONRenderer',
@@ -51,9 +49,9 @@ JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
 
-REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'tasks_api.serializers.CurrentUserSerializer'
-}
+# REST_AUTH_SERIALIZERS = {
+#     'USER_DETAILS_SERIALIZER': 'tasks_api.serializers.CurrentUserSerializer'
+# }
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -81,7 +79,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-renatolemes-tasksappapi-3alceeuv8s9.ws-eu102.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-renatolemes-tasksappapi-7g01n0ejrm3.ws-eu104.gitpod.io']
 
 
 # Application definition
